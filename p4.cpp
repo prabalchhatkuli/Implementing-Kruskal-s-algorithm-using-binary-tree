@@ -5,12 +5,6 @@
   
 using namespace std;
  
-//Prabal Chhatkuli
-//DATA Structures
-//Prof. Sourav Dutta
-//
-
-
 //--------------------------------------------creating graph------------------------------------  
   
 //each edge for a graph
@@ -39,7 +33,6 @@ struct Graph* createGraph(int numVertex, int numEdge)
     return graph; 
 } 
 
- //--------this is the same min heap that we did in class-----
 //-------------------------------------------------min Heap--------------------------
 
 //node for the mintop tree
