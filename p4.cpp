@@ -155,40 +155,6 @@ void BSTminTop:: gethead(node* root)
         return;
 }
 
-/* pop not working
-node* BSTminTop:: pop(node *root)
-{
-        if(root!=NULL)
-                {
-                                if(root->right==NULL && root->left== NULL)
-                                                {
-                                                                        swap(root,head);
-                                                                                                delete root;
-                                                                                                                        root=NULL;
-                                                                                                                                        }
-                                                                                                                                                
-                                                                                                                                                                else
-                                                                                                                                                                                {
-                                                                                                                                                                                                        if(root->left!= NULL)
-                                                                                                                                                                                                                                {
-                                                                                                                                                                                                                                                                root->left=pop(root->left);
-                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                                
-                                                                                                                                                                                                                                                                                                                                        else
-                                                                                                                                                                                                                                                                                                                                                                {
-                                                                                                                                                                                                                                                                                                                                                                                                root->right=pop(root->right);
-                                                                                                                                                                                                                                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                
-                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                return root;
-
-}
-*/
-
-
-
 
 node* BSTminTop::pop(node *root)
   {
@@ -234,10 +200,6 @@ node* BSTminTop::pop(node *root)
                                                                  }
  
   
-//structure used to implement union function
-//
-//
-//---------------I had segmentation faults in the implementation for the union so I had to get this part from the internet--------------
 //-------------------------------------------Part used to find the Union-------------------------
 struct NodeForsubset 
 { 
@@ -405,14 +367,7 @@ cout<<"INSerted into mean heap, created graph"<<endl;
 
         //finding the data in the created subset
         int TempSRC = find(listSubsets, next_edge.src);         int TempDEST = find(listSubsets, next_edge.dest); 
-  /*     if (subsets[findX].rank < subsets[findY].rank)   {       subsets[findX].parent = findY;     }
-    else if (subsets[findX].rank > subsets[findY].rank)  {            subsets[findY].parent = findX;     }
-    if (listSubset[i].parent != i)
-    {
-        listSubset[i].parent = find(listSubset, listSubset[i].parent); 
-    }
-*/
- 
+  
         // If including they are not equal include the values of the root into the array and increse the counter 
         if (TempSRC != TempDEST) 
         { 
@@ -424,13 +379,6 @@ cout<<"INSerted into mean heap, created graph"<<endl;
        } 
 
 //_____________________________________________________________________________________________
-    cout<<"check OK"<<endl;
-
-       // display MST 
-    //
-    //
- 
-
     cout<<"FROM the Kruskal's algorithm, we get the following:"<<endl;
     cout<<"src , dest,  weight"<<endl;
 
